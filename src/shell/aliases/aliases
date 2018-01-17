@@ -1,0 +1,49 @@
+# - - - - Easier navigation - - - - - - - - - - - - - - - - - - - - - - - - - -
+#alias ..="cd .."
+#alias ...="cd ../.."
+#alias ....="cd ../../.."
+
+# go to a specific folder
+alias rr="cd $HOME/Development"
+alias dl="cd $HOME/Downloads"
+alias dt="cd $HOME/Desktop"
+
+
+# - - - - mv, rm, cp + helpful options - - - - - - - - - - - - - - - - - - - - -
+alias mv='mv -v'
+alias rm='rm -i -v'
+alias cp='cp -v'
+
+
+# - - - - Shortcuts - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+alias a="atom"
+alias v="vim"
+alias cl='clear'
+alias uz="gunzip -k"
+
+# Open (file) In Chrome/Firefox (from shell)
+alias oic="o -a 'Google Chrome'"
+alias oif="o -a 'Firefox'"
+
+# open + edit widely used files
+alias ez='vim ~/.zshrc'
+
+
+# File size
+alias fs="stat -f \"%z bytes\""
+
+
+# Show human friendly numbers and colors
+alias df='df -h'
+alias du='du -h -d 2'
+
+
+# Vagrant
+alias vup="vagrant up"
+alias vhalt="vagrant halt"
+alias vkill="vagrant destroy"
+alias v-v="vagrant -v"
+
+
+# Copy SSH to clipboard
+alias sshcopy="cat ~/.ssh/id_rsa.pub | pbcopy && echo 'Copied pub ssh key to clipboard.'"

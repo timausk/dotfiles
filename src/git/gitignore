@@ -1,0 +1,80 @@
+# (!) set up a global core.excludesfile configuration file to point to global ignore file in homedir
+# git config --global core.excludesfile '~/.gitignore'
+
+# - - - - OS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+# Linux
+*~
+
+# macOS
+._*
+.AppleDouble
+.DS_Store
+.localized
+.LSOverride
+.Spotlight-V100
+.Trashes
+
+
+# Windows
+Desktop.ini
+ehthumbs.db
+Thumbs.db
+
+
+# - - - - VIM - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+# Swap
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-v][a-z]
+[._]sw[a-p]
+
+# Session
+Session.vim
+
+# Temporary
+.netrwhist
+*~
+# Auto-generated tag files
+tags
+
+
+# SASS
+.sass-cache/
+*.css.map
+
+
+# - - - - NODE - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+# no thx
+node_modules
+
+# Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
+.grunt
+
+# Bower dependency directory (https://bower.io/)
+bower_components
+
+
+# - - - - IDE -  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+# IntelliJ
+out/
+
+# JIRA plugin
+atlassian-ide-plugin.xml
+
+
+# Visual Studio
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+
+# LibreOffice locks
+.~lock.*#
+
+. ~/.gitignore.local

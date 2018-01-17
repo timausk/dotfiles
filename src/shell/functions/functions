@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Create a new directory and enter it
+function md() {
+  mkdir -p "$@" && cd "$@"
+  #     └─ make parent directories if needed
+}
+
+
+# (f)ind by (n)ame
+function fn() {
+  ls **/*$1*
+}
