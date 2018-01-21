@@ -15,11 +15,37 @@ alias rm='rm -i -v'
 alias cp='cp -v'
 
 
+# - - - - Git helper - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+
 # - - - - Shortcuts - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 alias a="atom"
 alias v="vim"
 alias cl='clear'
 alias uz="gunzip -k"
+
+
+# Git helper
+alias g='git'
+alias ga='git add'
+alias gaa='git add --all'
+alias gb='git branch'
+alias gba='git branch -a'
+alias gcam='git commit -a -m'
+alias gcb='git checkout -b'
+alias gcm='git checkout master'
+alias gcd='git checkout develop'
+alias gf='git fetch'
+alias gh='git help'
+alias gm='git merge'
+alias gma='git merge --abort'
+alias gpull='git pull origin $(git_current_branch)'
+alias gpush='git push origin $(git_current_branch)'
+alias gst='git status'
+alias gundop="git push -f origin HEAD^:master      # Undo a git push
+
+
 
 # Open (file) In Chrome/Firefox (from shell)
 alias oic="o -a 'Google Chrome'"
