@@ -1,9 +1,9 @@
 # Change path if you cloned the repo into another folder then web!
-shellDotPath=$HOME/web/dotfiles/src/shell
+shellDotPath=~/web/dotfiles/src/shell
 
 
-# Path to your oh-my-zsh installation.ll
-  export ZSH=$HOME/.oh-my-zsh
+# Path to your oh-my-zsh installation.
+export ZSH=~/.oh-my-zsh
 
 
 # THEMES
@@ -42,7 +42,7 @@ unalias -m "md"
 . "$shellDotPath/functions/functions"
 
 # local files
-. $HOME/.zshrc.local
+. ~/.zshrc.local
 
 # OS specific
 platform=$(uname)
