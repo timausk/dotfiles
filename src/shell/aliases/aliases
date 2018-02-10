@@ -1,12 +1,12 @@
 # - - - - Easier navigation - - - - - - - - - - - - - - - - - - - - - - - - - -
-#alias ..="cd .."
-#alias ...="cd ../.."
-#alias ....="cd ../../.."
+#alias ..='cd ..'
+#alias ...='cd ../..'
+#alias ....='cd ../../..'
 
 # go to a specific folder
-alias rr="cd $HOME/Development"
-alias dl="cd $HOME/Downloads"
-alias dt="cd $HOME/Desktop"
+alias rr='cd $HOME/Development'
+alias dl='cd $HOME/Downloads'
+alias dt='cd $HOME/Desktop'
 
 
 # - - - - mv, rm, cp + helpful options - - - - - - - - - - - - - - - - - - - - -
@@ -16,10 +16,10 @@ alias cp='cp -v'
 
 
 # - - - - Shortcuts - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-alias a="atom"
-alias v="vim"
+alias a='atom'
+alias v='vim'
 alias cl='clear'
-alias uz="gunzip -k"
+alias uz='gunzip -k'
 
 
 # Git helper
@@ -40,8 +40,8 @@ alias gma='git merge --abort'
 alias gpull='git pull origin $(git_current_branch)'
 alias gpush='git push origin $(git_current_branch)'
 alias gst='git status'
-alias gundoc="git reset HEAD~"                     # Undo last local commit
-alias gundop="git push -f origin HEAD^:master      # Undo a git push
+alias gundoc='git reset HEAD~'                     # Undo last local commit
+alias gundop='git push -f origin HEAD^:master'     # Undo a git push
 
 
 # Open (file) In Chrome/Firefox (from shell)
@@ -62,11 +62,11 @@ alias du='du -h -d 2'
 
 
 # Vagrant
-alias vup="vagrant up"
-alias vhalt="vagrant halt"
-alias vkill="vagrant destroy"
-alias v-v="vagrant -v"
+alias vup='vagrant up'
+alias vhalt='vagrant halt'
+alias vkill='vagrant destroy'
+alias v-v='vagrant -v'
 
 
 # Copy SSH to clipboard
-alias sshcopy="cat ~/.ssh/id_rsa.pub | pbcopy && echo 'Copied pub ssh key to clipboard.'"
+alias sshcopy='cat ~/.ssh/id_rsa.pub | pbcopy && echo "Copied pub ssh key to clipboard."'

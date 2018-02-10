@@ -1,12 +1,12 @@
 # - - - - Shorter Homebrew - - - - - - - - - - - - - - - - - - - - - - - - - - -
-alias brewd="brew doctor"
-alias brewl="brew list"
-alias brewi="brew install"
-alias brewr="brew uninstall"
-alias brewu="brew update \
+alias brewd='brew doctor'
+alias brewl='brew list'
+alias brewi='brew install'
+alias brewr='brew uninstall'
+alias brewu='brew update \
                 && brew upgrade \
                 && brew cleanup \
-                && brew cask cleanup"
+                && brew cask cleanup'
 
 
 
@@ -15,16 +15,16 @@ alias ls='ls -Gh'
 
 
 # Open from the terminal.
-alias o="open"
+alias o='open'
 
 
 # - - - - IP addresses - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
-alias l-ip="ipconfig getifaddr en0"
-alias l-ip-w="ipconfig getifaddr en1"
+alias ip='dig +short myip.opendns.com @resolver1.opendns.com'
+alias l-ip='ipconfig getifaddr en0'
+alias l-ip-w='ipconfig getifaddr en1'
 
 
 # - - - - UPDATE ALL - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Update MacOS + Homebrew, ..., + their installed packages
-alias update_all="sudo softwareupdate -i -a; brewu";
+alias update_all='sudo softwareupdate -i -a; brewu';
