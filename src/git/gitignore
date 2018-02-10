@@ -62,6 +62,8 @@ bower_components
 # IntelliJ
 out/
 .idea/   # ToDo s. https://stackoverflow.com/questions/11968531/what-to-gitignore-from-the-idea-folder
+*.iml
+
 
 # JIRA plugin
 atlassian-ide-plugin.xml
