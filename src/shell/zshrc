@@ -1,5 +1,5 @@
 # Change path if you cloned the repo into another folder then web!
-shellDotPath=~/web/dotfiles/src/shell
+shellDotPath=~/Development/dotfiles/src/shell
 
 
 # Path to your oh-my-zsh installation.
