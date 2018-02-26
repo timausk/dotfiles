@@ -1,15 +1,13 @@
 #!/bin/bash
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # setup-symlinks.sh
-
+#
 # This script creates symlinks from the home dir
 # to any desired dotfiles
-#
-# RFE make path to dotfiles folder configurable
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-dirDotfile=$HOME/Development/dotfiles
-dirDotfileBackup=$HOME/.dotfiles_backup
+dirDotfilesRoot=`dirname $PWD`;
+dirDotfilesBackup=$HOME/.dotfiles_backup
 
 
 # list of dotfiles to symlink
@@ -21,11 +19,11 @@ declare -a FILES_TO_SYMLINK=(
 
 
 # create a backup folder for existing dotfiles
-if [ -d "$dirDotfileBackup" ]; then
+if [ -d "$dirDotfilesBackup" ]; then
   echo "backup folder already exist"
   exit 1
 else
-  mkdir $dirDotfileBackup
+  mkdir $dirDotfilesBackup
   echo -e "backup folder created"
 fi
 
@@ -38,20 +36,20 @@ for i in "${FILES_TO_SYMLINK[@]}"; do
 
   # backup and remove existing dotfile from ~
   if [ -f $HOME/.$dotfile ]; then
-   cp $HOME/.$dotfile $dirDotfileBackup/.$dotfile
+   cp $HOME/.$dotfile $dirDotfilesBackup/.$dotfile
    rm $HOME/.$dotfile
    echo -e "Backed up and removed .$dotfile from ~"
   fi
 
   # create (if not exist) corresponding .local file
   if [ -f $HOME/.$dotfile.local ]; then
-    echo -e "$dotfile.local already exist in ~"
+    echo -e "$dotfile.local already exist"
   else
     echo -e ".$dotfile.local created"
     touch $HOME/.$dotfile.local
   fi
 
-  pathToSymlink="$dirDotfile/$i"
+  pathToSymlink="$dirDotfilesRoot/$i"
   pathToFile="$HOME/.$dotfile"
 
   # create symlink
