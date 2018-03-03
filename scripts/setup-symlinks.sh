@@ -9,6 +9,11 @@
 dirDotfilesRoot=`dirname $PWD`;
 dirDotfilesBackup=$HOME/.dotfiles_backup
 
+if [ ! -f $HOME/.zshenv ]; then
+  touch $HOME/.zshenv;
+fi
+
+echo "DOTFILESROOT=$dirDotfilesRoot" >> $HOME/.zshenv
 
 # list of dotfiles to symlink
 declare -a FILES_TO_SYMLINK=(

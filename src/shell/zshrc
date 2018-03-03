@@ -1,6 +1,4 @@
-# Change path if you cloned the repo into another folder then web!
-shellDotPath=~/Development/dotfiles/src/shell
-
+shellDotPath="$DOTFILESROOT/src/shell"
 
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
