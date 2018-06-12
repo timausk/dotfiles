@@ -45,7 +45,7 @@ unalias -m "md"
 # OS specific
 platform=$(uname)
 
-if [[ $platform == 'Linux' ]]; then
+if [[ $platform == "Linux" ]]; then
 #  . "test -r $shellDotPath/aliases/linux/aliases && . $shellDotPath/aliases/linux/aliases"
 . "$shellDotPath/aliases/linux/aliases"
 

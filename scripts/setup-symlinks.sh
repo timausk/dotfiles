@@ -8,12 +8,17 @@
 
 dirDotfilesRoot=`dirname $PWD`;
 dirDotfilesBackup=$HOME/.dotfiles_backup
+platform=$(uname)
 
 if [ ! -f $HOME/.zshenv ]; then
   touch $HOME/.zshenv;
 fi
 
 echo "DOTFILESROOT=$dirDotfilesRoot" >> $HOME/.zshenv
+if [[ $platform == "Darwin" ]]; then
+  echo "# set custom path for cesk applications" >> $HOME/.zshenv
+  echo export HOMEBREW_CASK_OPTS="--appdir=$HOME/Applications" >> $HOME/.zshenv
+fi
 
 # list of dotfiles to symlink
 declare -a FILES_TO_SYMLINK=(
@@ -21,7 +26,6 @@ declare -a FILES_TO_SYMLINK=(
   "src/shell/zshrc"
   "src/git/gitignore"
 )
-
 
 # create a backup folder for existing dotfiles
 if [ -d "$dirDotfilesBackup" ]; then
@@ -63,3 +67,7 @@ for i in "${FILES_TO_SYMLINK[@]}"; do
   echo -e "symlink for .$dotfile created"
 
 done
+
+if [! -f $HOME/.zshenv ]; then
+echo 'create file'
+fi
