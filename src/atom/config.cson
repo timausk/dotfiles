@@ -1,0 +1,31 @@
+"*":
+  autocomplete:
+    includeCompletionsFromAllBuffers: true
+  core:
+    telemetryConsent: "limited"
+    themes: [
+      "atom-dark-ui"
+      "base16-tomorrow-dark-theme"
+    ]
+  editor:
+    confirmCheckoutHeadRevision: false
+    fontSize: 14
+    preferredLineLength: 110
+    showIndentGuide: true
+  "exception-reporting":
+    userId: "8fe06a4e-c50c-4db9-9bf2-c5e9bd9710f3"
+  followSymlinks: true
+  ignoredNames: [
+    ".git"
+    ".hg"
+    ".svn"
+    ".DS_Store"
+    ".keep"
+    "._*"
+    "*.pyc"
+    "Thumbs.db"
+  ]
+  welcome:
+    showOnStartup: false
+  whitespace:
+    ignoreWhitespaceOnCurrentLine: false
