@@ -1,0 +1,7 @@
+atom-beautify@0.32.5
+emmet@2.4.3
+file-icons@2.1.21
+go-plus@5.8.3
+highlight-selected@0.13.1
+pigments@0.40.2
+
