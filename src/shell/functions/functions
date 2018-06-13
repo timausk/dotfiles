@@ -11,3 +11,13 @@ function md() {
 function fn() {
   ls **/*$1*
 }
+
+
+# atom package handling
+function atom_pkg_install() {
+  apm install --packages-file $DOTFILESROOT/src/atom/package-list.txt
+}
+
+function atom_pkg_update() {
+  apm list --installed --bare > $DOTFILESROOT/src/atom/package-list.txt
+}
