@@ -15,10 +15,6 @@ if [ ! -f $HOME/.zshenv ]; then
 fi
 
 echo "DOTFILESROOT=$dirDotfilesRoot" >> $HOME/.zshenv
-if [[ $platform == "Darwin" ]]; then
-  echo "# set custom path for cesk applications" >> $HOME/.zshenv
-  echo export HOMEBREW_CASK_OPTS="--appdir=$HOME/Applications" >> $HOME/.zshenv
-fi
 
 # list of dotfiles to symlink
 declare -a FILES_TO_SYMLINK=(
