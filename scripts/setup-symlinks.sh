@@ -63,7 +63,3 @@ for i in "${FILES_TO_SYMLINK[@]}"; do
   echo -e "symlink for .$dotfile created"
 
 done
-
-if [! -f $HOME/.zshenv ]; then
-echo 'create file'
-fi
