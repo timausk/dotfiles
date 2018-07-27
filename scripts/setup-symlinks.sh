@@ -1,14 +1,16 @@
 #!/bin/bash
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # setup-symlinks.sh
 #
 # This script creates symlinks from the home dir
 # to any desired dotfiles
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+. "helper.sh"
+
+print_info "- - - - - - - Create symbolic links - - - - - - - - - - - - - - - - - - -"
 
 dirDotfilesRoot=`dirname $PWD`;
 dirDotfilesBackup=$HOME/.dotfiles_backup
-platform=$(uname)
 
 if [ ! -f $HOME/.zshenv ]; then
   touch $HOME/.zshenv;
@@ -25,11 +27,11 @@ declare -a FILES_TO_SYMLINK=(
 
 # create a backup folder for existing dotfiles
 if [ -d "$dirDotfilesBackup" ]; then
-  echo "backup folder already exist"
+  print_warning "backup folder already exist"
   exit 1
 else
   mkdir $dirDotfilesBackup
-  echo -e "backup folder created"
+  print_action "backup folder created"
 fi
 
 
@@ -43,14 +45,14 @@ for i in "${FILES_TO_SYMLINK[@]}"; do
   if [ -f $HOME/.$dotfile ]; then
    cp $HOME/.$dotfile $dirDotfilesBackup/.$dotfile
    rm $HOME/.$dotfile
-   echo -e "Backed up and removed .$dotfile from ~"
+   print_action"Backed up and removed .$dotfile from ~"
   fi
 
   # create (if not exist) corresponding .local file
   if [ -f $HOME/.$dotfile.local ]; then
-    echo -e "$dotfile.local already exist"
+    print_action "$dotfile.local already exist"
   else
-    echo -e ".$dotfile.local created"
+    print_action ".$dotfile.local created"
     touch $HOME/.$dotfile.local
   fi
 
@@ -60,10 +62,6 @@ for i in "${FILES_TO_SYMLINK[@]}"; do
   # create symlink
   ln -s $pathToSymlink $pathToFile
 
-  echo -e "symlink for .$dotfile created"
+  print_action "symlink for .$dotfile created"
 
 done
-
-if [! -f $HOME/.zshenv ]; then
-echo 'create file'
-fi

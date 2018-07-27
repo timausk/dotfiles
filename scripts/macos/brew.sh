@@ -1,30 +1,41 @@
 #!/bin/bash
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # brew.sh
 #
 # Installing homebrew + packages and casks
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+. "helper.sh"
 
-echo "homebrew installation"
+# todo
+#      info xcode, please confirm prompt
+print_info "- - - - - - - Install Homebrew - - - - - - - - - - - - - - - - - - - - -"
 
-echo "Use alternative installation directory (only recommend if /usr/local is locked down) [Yes|No]?"
+print_in_yellow "Use alternative installation directory (only recommend if /usr/local is locked down) [Yes|No]?\n"
 select yn in "Yes" "No"; do
-    case $yn in
-        Yes )
-          echo "install homebrew to alternative directory ~/.homebrew";
-          mkdir $HOME/.homebrew &&
-          curl -L https://github.com/mxcl/homebrew/tarball/master | tar xz --strip 1 -C $HOME/.homebrew
-          export PATH=$HOME/.homebrew/bin:$HOME/.homebrew/sbin:$PATHbreak
-          break
-        ;;
-        No )
-          echo "install homebrew to /usr/local";
-          /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-          break
-        ;;
-        * )
-          echo "Please select Yes or No!"
-        ;;
+  case $yn in
+    Yes )
+      read -p "Install to directory ~/.homebrew [Y | any other key to exit]  `echo $'\n> '`" -n 1 -r
+      echo #new line
+      if [[ $REPLY =~ ^[Yy]$ ]]; then
+        print_action "install homebrew to alternative directory ~/.homebrew";
+        mkdir $HOME/.homebrew &&
+        curl -L https://github.com/mxcl/homebrew/tarball/master | tar xz --strip 1 -C $HOME/.homebrew
+        export PATH=$HOME/.homebrew/bin:$HOME/.homebrew/sbin:$PATH
+        break
+      fi
+    ;;
+    No )
+      read -p "Install to default folder /usr/local [Y | any other key to exit]  `echo $'\n> '`" -n 1 -r
+      echo #new line
+      if [[ $REPLY =~ ^[Yy]$ ]]; then
+        print_action "install homebrew to /usr/local";
+        /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+        break
+      fi
+    ;;
+    * )
+      print_in_red "Please select Yes or No!"
+    ;;
     esac
 done
 

@@ -5,39 +5,48 @@
 # setup a new machine
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-. "helper.sh"
+# - - - - - - - - - - - - - - - - - - - - - - - - -
+# Load helper functions
 
-# Install XCode Command Line Tools
-# thx @alrra
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-if ! xcode-select --print-path &> /dev/null; then
+. "helper.sh" || exit 1;
 
-  # Prompt user to install the XCode Command Line Tools
-  xcode-select --install &> /dev/null
 
-  # Wait until the XCode Command Line Tools are installed
-  until xcode-select --print-path &> /dev/null; do
-    sleep 5
-  done
+# - - - - - - - - - - - - - - - - - - - - - - - - -
+# verify OS
 
-  print_result $? 'Install XCode Command Line Tools'
+os="$(get_os)"
 
-  # Point the `xcode-select` developer directory to
-  # the appropriate directory from within `Xcode.app`
-  # https://github.com/alrra/dotfiles/issues/13
-
-  # sudo xcode-select -switch /Applications/Xcode.app/Contents/Developer
-  print_result $? 'Make "xcode-select" developer directory point to Xcode'
-
-  # Prompt user to agree to the terms of the Xcode license
-  # https://github.com/alrra/dotfiles/issues/10
-
-  sudo xcodebuild -license
-  print_result $? 'Agree with the XCode Command Line Tools licence'
-
+if [[ ! $os =~ ^(macos|linux)$ ]]; then
+  print_error "Platform not supported (kernelName = $os)!"
+  exit 1;
 fi
 
+print_in_green "Setup new machine [$os]\n"
 
-# installing homebrew packages + casks
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-./macos/brew.sh
+print_in_red "DO NOT continue if you not fully understand what it does! "
+read -p "(Y to continue or any other key to exit) `echo $'\n> '`" -n 1 -r
+echo #new line
+if [[ ! $REPLY =~ ^[Yy]$ ]]; then
+  exit 1;
+fi
+
+print_in_white "Please enter your Password\n"
+
+
+# - - - - - - - - - - - - - - - - - - - - - - - - -
+# ask for sudo upfront
+ask_for_sudo
+
+
+# - - - - - - - - - - - - - - - - - - - - - - - - -
+# setup symlinks
+
+./setup-symlinks.sh
+
+
+# - - - - - - - - - - - - - - - - - - - - - - - - -
+# setup system
+
+"./$(get_os)/setup.sh"
+
+print_in_green "DONE";
