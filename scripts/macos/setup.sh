@@ -4,18 +4,18 @@
 #
 # setup a new MAC machine
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-. "helper.sh"
+cd "$(dirname "${BASH_SOURCE[0]}")" \ && . "../helper.sh"
 
 # - - - - - - - - - - - - - - - - - - - - - - - - -
 # installing XCode
 
-./macos/xcode.sh
+./xcode.sh
 
 
 # - - - - - - - - - - - - - - - - - - - - - - - - -
 # installing homebrew packages + casks
 
-./macos/brew.sh
+./brew.sh
 
 
 # - - - - - - - - - - - - - - - - - - - - - - - - -

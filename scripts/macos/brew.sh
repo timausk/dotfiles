@@ -4,7 +4,7 @@
 #
 # Installing homebrew + packages and casks
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-. "helper.sh"
+cd "$(dirname "${BASH_SOURCE[0]}")" \ && . "../helper.sh"
 
 # todo
 #      info xcode, please confirm prompt

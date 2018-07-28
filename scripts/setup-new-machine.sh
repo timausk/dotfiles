@@ -8,7 +8,7 @@
 # - - - - - - - - - - - - - - - - - - - - - - - - -
 # Load helper functions
 
-. "helper.sh" || exit 1;
+cd "$(dirname "${BASH_SOURCE[0]}")" \ && . "helper.sh" || exit 1;
 
 
 # - - - - - - - - - - - - - - - - - - - - - - - - -

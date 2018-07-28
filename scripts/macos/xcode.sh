@@ -5,7 +5,7 @@
 # Install XCode Command Line Tools
 # thx @alrra
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-. "helper.sh"
+cd "$(dirname "${BASH_SOURCE[0]}")" \ && . "../helper.sh"
 
 
 print_info "- - - - - - - Install XCode Command Line Tools - - - - - - - - - - - - -"

@@ -5,7 +5,7 @@
 # This script creates symlinks from the home dir
 # to any desired dotfiles
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-. "helper.sh"
+cd "$(dirname "${BASH_SOURCE[0]}")" \ && . "helper.sh"
 
 print_info "- - - - - - - Create symbolic links - - - - - - - - - - - - - - - - - - -"
 
