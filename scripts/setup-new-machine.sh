@@ -49,4 +49,4 @@ ask_for_sudo
 
 "./$(get_os)/setup.sh"
 
-print_in_green "DONE";
+print_in_green "DONE\n";

@@ -6,8 +6,7 @@
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 cd "$(dirname "${BASH_SOURCE[0]}")" \ && . "../helper.sh"
 
-# todo
-#      info xcode, please confirm prompt
+
 print_info "- - - - - - - Install Homebrew - - - - - - - - - - - - - - - - - - - - -"
 
 print_in_yellow "Use alternative installation directory (only recommend if /usr/local is locked down) [Yes|No]?\n"
@@ -55,6 +54,19 @@ brew install "${brew_pkg[@]}"
 
 
 # install casks
+
+print_in_yellow "Install CASKs to users local application dir (Users/$(whoami)/Applications)"
+read -p "[Y|N]? `echo $'\n> '`" -n 1 -r
+echo #new line
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+  if [ ! -f $HOME/.zshenv ]; then
+    touch $HOME/.zshenv;
+  fi
+
+  echo "export HOMEBREW_CASK_OPTS=--appdir=/Users/$(whoami)/Applications" >> $HOME/.zshenv
+  . $HOME/.zshenv
+fi
+
 brew_casks=(
   appcleaner
   atom
