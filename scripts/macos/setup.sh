@@ -19,6 +19,12 @@ cd "$(dirname "${BASH_SOURCE[0]}")" \ && . "../helper.sh"
 
 
 # - - - - - - - - - - - - - - - - - - - - - - - - -
+# installing node version manager
+
+./../common/nvm.sh
+
+
+# - - - - - - - - - - - - - - - - - - - - - - - - -
 # update OS
 
 print_info "- - - - - Update OS - - - - - - - - - - - - - - - - - - - - - - - - - -"
