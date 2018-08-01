@@ -19,6 +19,12 @@ cd "$(dirname "${BASH_SOURCE[0]}")" \ && . "../helper.sh"
 
 
 # - - - - - - - - - - - - - - - - - - - - - - - - -
+# installing oh-my-zsh
+
+./../common/oh_my_zsh.sh
+
+
+# - - - - - - - - - - - - - - - - - - - - - - - - -
 # installing node version manager
 
 ./../common/nvm.sh
