@@ -20,7 +20,7 @@ echo "DOTFILESROOT=$dirDotfilesRoot" >> $HOME/.zshenv
 
 # list of dotfiles to symlink
 declare -a FILES_TO_SYMLINK=(
-  "editorconfig"
+  "src/editorconfig"
   "src/shell/zshrc"
   "src/git/gitignore"
 )
