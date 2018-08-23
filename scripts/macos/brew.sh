@@ -70,8 +70,12 @@ fi
 brew_casks=(
   appcleaner
   atom
+  firefox
+  firefox-developer-edition
   google-chrome
+  google-chrome-canary
   google-backup-and-sync # google drive
+  keepassx
   skype
   # ToDo find a way to handle the annoying KEXT security error
   #virtualbox
