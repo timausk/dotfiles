@@ -18,6 +18,9 @@ cd "$(dirname "${BASH_SOURCE[0]}")" \ && . "../helper.sh"
 ./brew.sh
 
 
+# installing bre packages
+atom_pkg_install
+
 # - - - - - - - - - - - - - - - - - - - - - - - - -
 # installing oh-my-zsh
 

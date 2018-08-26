@@ -70,6 +70,7 @@ fi
 brew_casks=(
   appcleaner
   atom
+  couchbase-server-community
   firefox
   firefox-developer-edition
   google-chrome
