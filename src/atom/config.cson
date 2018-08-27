@@ -25,6 +25,7 @@
     "*.pyc"
     "Thumbs.db"
   ]
+  "linter-eslint": {}
   welcome:
     showOnStartup: false
   whitespace:

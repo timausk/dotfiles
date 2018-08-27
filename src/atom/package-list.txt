@@ -1,7 +1,16 @@
-atom-beautify@0.32.5
+atom-beautify@0.33.0
+busy-signal@1.4.3
+docblockr@0.13.7
 emmet@2.4.3
-file-icons@2.1.21
-go-plus@5.8.3
-highlight-selected@0.13.1
+file-icons@2.1.24
+git-time-machine@2.1.0
+go-plus@5.8.5
+highlight-selected@0.14.0
+intentions@1.1.5
+language-vue@0.23.1
+linter@2.2.0
+linter-eslint@8.4.1
+linter-ui-default@1.7.1
 pigments@0.40.2
+split-diff@1.5.2
 
