@@ -76,6 +76,7 @@ brew_casks=(
   google-chrome
   google-chrome-canary
   google-backup-and-sync # google drive
+  imageoptim
   keepassx
   skype
   # ToDo find a way to handle the annoying KEXT security error
