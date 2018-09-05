@@ -1,11 +1,8 @@
 "*":
-  "atom-beautify":
-    general:
-      _analyticsUserId: "cfcadd6d-0ea3-4a84-bb86-4d80b768cf70"
   autocomplete:
     includeCompletionsFromAllBuffers: true
   core:
-    telemetryConsent: "limited"
+    telemetryConsent: "no"
     themes: [
       "atom-dark-ui"
       "base16-tomorrow-dark-theme"
