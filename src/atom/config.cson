@@ -1,4 +1,7 @@
 "*":
+  "atom-beautify":
+    general:
+      _analyticsUserId: "cfcadd6d-0ea3-4a84-bb86-4d80b768cf70"
   autocomplete:
     includeCompletionsFromAllBuffers: true
   core:
@@ -26,6 +29,7 @@
     "Thumbs.db"
   ]
   "linter-eslint": {}
+  "linter-ui-default": {}
   welcome:
     showOnStartup: false
   whitespace:

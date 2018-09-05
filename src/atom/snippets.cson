@@ -19,3 +19,41 @@
 # If you are unfamiliar with CSON, you can read more about it in the
 # Atom Flight Manual:
 # http://flight-manual.atom.io/using-atom/sections/basic-customization/#_cson
+
+'.source.js':
+  'strict mode':
+    'prefix': 'st'
+    'body': '\'use strict\';'
+  '[classList] .add':
+    'prefix': 'cla'
+    'body': '${1:element}.classList.add(\'${2:class}\');'
+  '[classList] .remove':
+    'prefix': 'clr'
+    'body': '${1:element}.classList.remove(\'${2:class}\');'
+  '[classList] .toggle':
+    'prefix': 'clt'
+    'body': '${1:element}.classList.toggle(\'${2:class}\');'
+  'getAttribute':
+    'prefix': 'geta'
+    'body': '${1:element}.getAttribute(\'${2:attr}\');'
+  'setAttribute':
+    'prefix': 'seta'
+    'body': '${1:element}.setAttribute(\'${2:attr}\');'
+  'querySelector':
+    'prefix': 'qs'
+    'body': '${1:document}.querySelector(\'${2:selector}\');'
+  'querySelectorAll':
+    'prefix': 'qsa'
+    'body': '${1:document}.querySelectorAll(\'${2:selector}\');'
+  'JSON.parse':
+    'prefix': 'jp'
+    'body': 'JSON.parse(${1:obj});'
+  'JSON.stringify':
+    'prefix': 'js'
+    'body': 'JSON.stringify(${1:obj});'
+  'console.log':
+    'prefix': 'log'
+    'body': 'console.log(\'${1:crash}\',$1);$2'
+  'debugger':
+    'prefix': 'de'
+    'body': 'debugger;'
