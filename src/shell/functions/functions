@@ -21,3 +21,21 @@ function atom_pkg_install() {
 function atom_pkg_update() {
   apm list --installed --bare > $DOTFILESROOT/src/atom/package-list.txt
 }
+
+
+# download mp3 with youtube-dl
+ydl() {
+  # https://superuser.com/questions/555874/zsh-read-command-fails-within-bash-function-read1-p-no-coprocess
+  echo -n "$(tput setaf 6)What is the YouTube link?$(tput sgr 0)"
+    read REPLY
+
+    if [[ $REPLY = *"www.youtube.com"* ]]; then
+      youtube-dl -x --audio-quality 3 --audio-format mp3 -o "~/Downloads/Music/%(title)s.%(ext)s" $REPLY
+      ydl
+    elif [[ $REPLY =~ ^[Xx]$ ]]; then
+      return;
+    else
+      echo 'Link is not valid. Try again [or press x for exit]'
+      ydl
+    fi
+}

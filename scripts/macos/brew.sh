@@ -45,7 +45,10 @@ brew tap homebrew/cask
 
 # install packages
 brew_pkg=(
+  ffmpeg
+  htop
   git
+  youtube-dl
   zsh
   zsh-completions
 )
