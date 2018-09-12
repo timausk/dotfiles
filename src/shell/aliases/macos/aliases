@@ -5,9 +5,8 @@ alias brewi='brew install'
 alias brewr='brew uninstall'
 alias brewu='brew update \
                 && brew upgrade \
-                && brew cleanup \
                 && brew cask upgrade --greedy \
-                && brew cask cleanup'
+                && brew cleanup'
 
 
 
