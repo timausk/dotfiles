@@ -57,3 +57,23 @@
   'debugger':
     'prefix': 'de'
     'body': 'debugger;'
+
+
+
+'.text.html.vue':
+  'Vue Single File Component':
+    prefix: 'v-sf'
+    body: """
+      <template>
+        <div></div>
+      </template>
+      <script>
+        export default {
+        }
+      </script>
+      <style scoped>
+      </style>
+    """
+  'script':
+    'prefix': 'script'
+    'body': '<script>$1</script>;'
