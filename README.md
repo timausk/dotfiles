@@ -3,14 +3,20 @@
 * Certainly you can make suggestions, but highly likely I may decline it, if it's not of personal value to me.
 
 
-## Setup
-work in progress ...
-
 ### Installation
-work in progress ...
+__Warning__: If you want to give these dotfiles a try, you should first fork this repository, review the code, and remove things you don’t want or need. Don’t blindly use my settings unless you know what that entails. Use at your own risk!
 
-### Local Settings
-work in progress ...
+To get started clone please run:
+`. setup-new-machine.sh`  
+Note: This will automatically install all of its subcomponents and setup symlinks for the dotfiles.  
+If you want to just install only the dotfiles, run:
+`. setup-symlinks.sh`
+
+
+### Docs
+
+* [Atom](docs/atom.md)
+
 
 ## Things to know
 ### My dotfiles are inspired by a number of great developers, so I have to say thanks to...
