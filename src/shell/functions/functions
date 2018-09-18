@@ -23,8 +23,19 @@ function atom_pkg_update() {
 }
 
 
+# update node version manager
+function update_nvm () {
+  echo 'update Node Version Manager'
+  cd $HOME/.nvm &&
+  git fetch --quiet origin &&
+  git checkout --quiet &&
+  . $HOME/.nvm/nvm.sh &&
+  echo 'nvm UPDATED'
+}
+
+
 # download mp3 with youtube-dl
-ydl() {
+function ydl() {
   # https://superuser.com/questions/555874/zsh-read-command-fails-within-bash-function-read1-p-no-coprocess
   echo -n "$(tput setaf 6)What is the YouTube link?$(tput sgr 0)"
     read REPLY

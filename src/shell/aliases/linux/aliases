@@ -7,7 +7,7 @@ alias aptuu='sudo apt-get update \
 
 
 
-alias update_all='aptuu';
+alias update_all='aptuu; update_nvm';
 
 
 alias ll='ls -alh --color=auto'

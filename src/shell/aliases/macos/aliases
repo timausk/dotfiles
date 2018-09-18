@@ -26,5 +26,5 @@ alias l-ip-w='ipconfig getifaddr en1'
 
 
 # - - - - UPDATE ALL - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-# Update MacOS + Homebrew, ..., + their installed packages
-alias update_all='sudo softwareupdate -i -a; brewu';
+# Update MacOS + Homebrew, nvm
+alias update_all='sudo softwareupdate -i -a; brewu; update_nvm';
