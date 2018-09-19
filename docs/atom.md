@@ -5,7 +5,7 @@ __setup-new-machine.sh__ installs Atom and creates symbolic links for .atom conf
 
 ## Package-list handling
 To keep installed atom packages across machines in sync we use a packaglist.txt file which lists all installed packages.
-Doing it this way prevents versioning the whole packages. 
+Doing it this way prevents versioning the whole packages.
 
 
 For installing packages from the packaglist.txt run:  
@@ -32,10 +32,10 @@ After installing a new package run the following command to keep packagelist.txt
 [cla] classList .add  
 `${1:element}.classList.add(\'${2:class}\');`
 
-[cla] classList .remove  
+[clr] classList .remove  
 `${1:element}.classList.remove(\'${2:class}\');`
 
-[cla] classList .toggle  
+[clt] classList .toggle  
 `${1:element}.classList.toggle(\'${2:class}\');`
 
 [geta] getAttribute  
@@ -64,5 +64,3 @@ After installing a new package run the following command to keep packagelist.txt
 
 ### Vue
 [vsf] Vue Single File Component   
-
-

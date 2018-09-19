@@ -62,7 +62,7 @@
 
 '.text.html.vue':
   'Vue Single File Component':
-    prefix: 'v-sf'
+    prefix: 'vsf'
     body: """
       <template>
         <div></div>
@@ -76,4 +76,13 @@
     """
   'script':
     'prefix': 'script'
-    'body': '<script>$1</script>;'
+    'body': """
+      <script>
+        export default {
+          $1
+        }
+      </script>
+    """
+  'style':
+    'prefix': 'style'
+    'body': '<style scoped>$1</style>'

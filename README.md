@@ -6,10 +6,10 @@
 ### Installation
 __Warning__: If you want to give these dotfiles a try, you should first fork this repository, review the code, and remove things you don’t want or need. Don’t blindly use my settings unless you know what that entails. Use at your own risk!
 
-To get started clone please run:
+To get started run:
 `. setup-new-machine.sh`  
 Note: This will automatically install all of its subcomponents and setup symlinks for the dotfiles.  
-If you want to just install only the dotfiles, run:
+If you just want to install only the dotfiles, run:
 `. setup-symlinks.sh`
 
 

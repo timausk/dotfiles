@@ -33,3 +33,5 @@
 
 'atom-text-editor':
   'cmd-d': 'editor:duplicate-lines'
+'atom-text-editor[data-grammar~="vue"]:not([mini])':
+    'ctrl-e': 'emmet:expand-abbreviation-with-tab'
