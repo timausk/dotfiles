@@ -48,6 +48,7 @@ brew_pkg=(
   ffmpeg
   htop
   git
+  mongodb
   youtube-dl
   zsh
   zsh-completions
@@ -80,8 +81,11 @@ brew_casks=(
   google-chrome-canary
   google-backup-and-sync # google drive
   imageoptim
+  iterm2
   keepassx
+  postman
   skype
+  steam
   # ToDo find a way to handle the annoying KEXT security error
   #virtualbox
   #vagrant
