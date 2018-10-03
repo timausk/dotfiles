@@ -77,6 +77,7 @@ brew_casks=(
   couchbase-server-community
   firefox
   firefox-developer-edition
+  fork
   google-chrome
   google-chrome-canary
   google-backup-and-sync # google drive
@@ -84,6 +85,7 @@ brew_casks=(
   iterm2
   keepassx
   postman
+  robo-3t # robomongo
   skype
   steam
   # ToDo find a way to handle the annoying KEXT security error
