@@ -40,15 +40,17 @@ done
 
 brew update && brew upgrade
 
-# make cask available
+# make cask repos available
 brew tap homebrew/cask
 
 # install packages
 brew_pkg=(
+  composer
   ffmpeg
   htop
   git
   mongodb
+  php70
   youtube-dl
   zsh
   zsh-completions
@@ -75,6 +77,7 @@ brew_casks=(
   appcleaner
   atom
   couchbase-server-community
+  cyberduck
   firefox
   firefox-developer-edition
   fork
