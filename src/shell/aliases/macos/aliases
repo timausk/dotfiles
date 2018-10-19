@@ -1,4 +1,4 @@
-# - - - - Shorter Homebrew - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# - - - - Shortcuts - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 alias brewd='brew doctor'
 alias brewl='brew list'
 alias brewi='brew install'
@@ -16,6 +16,12 @@ alias ls='ls -Gh'
 
 # Open from the terminal.
 alias o='open'
+
+
+# MongoDB
+alias mup='brew services start mongodb && mongo'  # start as a service && access the shell
+alias mstop='brew services stop mongodb'
+alias mrestart='brew services restart mongodb'
 
 
 # - - - - IP addresses - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
