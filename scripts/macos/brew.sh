@@ -86,6 +86,7 @@ brew_casks=(
   google-backup-and-sync # google drive
   imageoptim
   iterm2
+  java # this installs the latest version!
   keepassx
   postman
   robo-3t # robomongo
