@@ -53,7 +53,10 @@
     'body': 'JSON.stringify(${1:obj});'
   'console.log':
     'prefix': 'log'
-    'body': 'console.log(\'${1:crash}\',$1);$2'
+    'body': 'console.log({${1:crash}});$2'
+  'console.log highlight':
+    'prefix': 'logh'
+    'body': 'console.log(\'%c ${1:value}\',\'color: #ffa237\', ${1:value});$2'
   'debugger':
     'prefix': 'de'
     'body': 'debugger;'
