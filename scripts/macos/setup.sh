@@ -4,7 +4,7 @@
 #
 # setup a new MAC machine
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-cd "$(dirname "${BASH_SOURCE[0]}")" \ && . "../helper.sh"
+cd "$(dirname "${BASH_SOURCE[0]}")" && . "../helper.sh"
 
 # - - - - - - - - - - - - - - - - - - - - - - - - -
 # installing XCode

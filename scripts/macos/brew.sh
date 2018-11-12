@@ -4,7 +4,7 @@
 #
 # Installing homebrew + packages and casks
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-cd "$(dirname "${BASH_SOURCE[0]}")" \ && . "../helper.sh"
+cd "$(dirname "${BASH_SOURCE[0]}")" && . "../helper.sh"
 
 
 print_info "- - - - - - - Install Homebrew - - - - - - - - - - - - - - - - - - - - -"
