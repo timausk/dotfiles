@@ -4,7 +4,7 @@
 #
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-cd "$(dirname "${BASH_SOURCE[0]}")" \ && . "../helper.sh"
+cd "$(dirname "${BASH_SOURCE[0]}")" && . "../helper.sh"
 
 
 print_info "- - - - - - - Install Node Version Manager  - - - - - - - - - - - - - - -"
@@ -93,4 +93,3 @@ else
 fi
 
 install_latest_stable_node
-

@@ -26,3 +26,8 @@ sudo apt update;
 # - - - - - - - - - - - - - - - - - - - - - - - - -
 # installing oh-my-zsh
 ./../common/oh_my_zsh.sh
+
+
+# - - - - - - - - - - - - - - - - - - - - - - - - -
+# installing Node Verion Manager
+./../common/nvm.sh
