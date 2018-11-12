@@ -1,9 +1,9 @@
 # Shorter commands for Advanced Packaging Tool
-alias apti='sudo apt-get install'
-alias aptr='sudo apt-get remove'
-alias aptuu='sudo apt-get update \
-		  && sudo apt-get upgrade -y \
-		  && sudo apt-get autoremove'
+alias apti='sudo apt install'
+alias aptr='sudo apt remove'
+alias aptuu='sudo apt update \
+		  && sudo apt upgrade -y \
+		  && sudo apt autoremove'
 
 
 
