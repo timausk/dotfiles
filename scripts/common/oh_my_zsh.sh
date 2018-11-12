@@ -4,7 +4,7 @@
 #
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-cd "$(dirname "${BASH_SOURCE[0]}")" \ && . "../helper.sh"
+cd "$(dirname "${BASH_SOURCE[0]}")" && . "../helper.sh"
 
 
 print_info "- - - - - - - Install Oh My Zsh - - - - - - - - - - - - - - - - - - - - -"
@@ -16,6 +16,11 @@ print_info "- - - - - - - Install Oh My Zsh - - - - - - - - - - - - - - - - - - 
 is_zsh_installed () {
   if ! command -v zsh >/dev/null 2>&1; then
     print_warning "Zsh is not installed! Please install zsh first!"
+    # TODO installl if not pre installed!
+    # if we use ubuntus new minimal installation, which is available since ubuntu 18.04,
+    # we have no zsh ! on mac it should alvays be pre installed, I guess..!?
+    # check not installed cases and update script
+    # on linux we can use apt install zsh
     exit 1
   fi
 }

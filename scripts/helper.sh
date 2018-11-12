@@ -70,6 +70,8 @@ print_in_white() {
 # - - - - - - - - - - - - - - - - - - - - - - - - -
 # Ask for the admin password upfront
 
+# TODO is it working on linux?
+# seams we have to use sudo and enter password again later on
 ask_for_sudo() {
 
   sudo -v &> /dev/null
