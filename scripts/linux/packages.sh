@@ -11,6 +11,11 @@ print_info "- - - - - - - Install Packages - - - - - - - - - - - - - - - - - - -
 
 
 # - - - - - - - - - - - - - - - - - - - - - - - - -
+# installing vim
+./packages/vim.sh
+
+
+# - - - - - - - - - - - - - - - - - - - - - - - - -
 # installing webstorm
 ./packages/atom.sh
 
@@ -23,3 +28,8 @@ print_info "- - - - - - - Install Packages - - - - - - - - - - - - - - - - - - -
 # - - - - - - - - - - - - - - - - - - - - - - - - -
 # installing guake
 ./packages/guake.sh
+
+
+# - - - - - - - - - - - - - - - - - - - - - - - - -
+# installing ovpn
+./packages/ovpn.sh
