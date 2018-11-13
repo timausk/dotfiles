@@ -31,5 +31,10 @@ print_info "- - - - - - - Install Packages - - - - - - - - - - - - - - - - - - -
 
 
 # - - - - - - - - - - - - - - - - - - - - - - - - -
+# installing mongodb
+./packages/mongodb.sh
+
+
+# - - - - - - - - - - - - - - - - - - - - - - - - -
 # installing ovpn
 ./packages/ovpn.sh
