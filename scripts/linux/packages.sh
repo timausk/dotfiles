@@ -37,6 +37,11 @@ print_info "- - - - - - - Install Packages - - - - - - - - - - - - - - - - - - -
 
 
 # - - - - - - - - - - - - - - - - - - - - - - - - -
+# installing robo3T
+./packages/robo3t.sh
+
+
+# - - - - - - - - - - - - - - - - - - - - - - - - -
 # installing mongodb
 ./packages/mongodb.sh
 
