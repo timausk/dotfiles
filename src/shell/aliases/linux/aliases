@@ -17,6 +17,9 @@ alias ls='ls --color=auto'
 # Open from the terminal.
 alias o='xdg-open'
 
+# start robo3T
+alias runrobot3='cd /usr/local/bin/robo3t/bin && ./robo3t'
+
 # Get local IP
 alias l-ip='ifconfig \
                     | grep 'inet addr' \
