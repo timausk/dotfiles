@@ -22,7 +22,7 @@ print_info "- - - - - - - Install Packages - - - - - - - - - - - - - - - - - - -
 
 
 # - - - - - - - - - - - - - - - - - - - - - - - - -
-# installing webstorm
+# installing atom
 ./packages/atom.sh
 
 
@@ -49,3 +49,9 @@ print_info "- - - - - - - Install Packages - - - - - - - - - - - - - - - - - - -
 # - - - - - - - - - - - - - - - - - - - - - - - - -
 # installing ovpn
 ./packages/ovpn.sh
+
+
+# - - - - - - - - - - - - - - - - - - - - - - - - -
+# installing pinta
+# (!) see comment in pinta.sh
+#./packages/pinta.sh
