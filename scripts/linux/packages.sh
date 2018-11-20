@@ -52,6 +52,11 @@ print_info "- - - - - - - Install Packages - - - - - - - - - - - - - - - - - - -
 
 
 # - - - - - - - - - - - - - - - - - - - - - - - - -
+# installing office
+./packages/office.sh
+
+
+# - - - - - - - - - - - - - - - - - - - - - - - - -
 # installing pinta
 # (!) see comment in pinta.sh
 #./packages/pinta.sh
