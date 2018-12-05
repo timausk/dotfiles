@@ -49,6 +49,7 @@ declare -a brew_pkg=(
   ffmpeg
   htop
   git
+  maven
   mongodb
   php70
   youtube-dl
@@ -103,6 +104,7 @@ declare -a brew_casks=(
   google-chrome
   google-chrome-canary
   google-backup-and-sync # google drive
+  intellij-idea # ultimate edition
   imageoptim
   iterm2
   java # this installs the latest version!
