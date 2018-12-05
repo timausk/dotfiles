@@ -136,7 +136,6 @@ done
 
 echo "${brew_casks[*]}"
 print_in_yellow "The following packages will be installed via homebrew => ${brew_casks_install[*]}"
-exit
 
 : '
 if [[ ${brew_casks[@]} = *"virtualbox"* ]]; then
