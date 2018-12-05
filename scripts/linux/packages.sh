@@ -47,6 +47,11 @@ print_info "- - - - - - - Install Packages - - - - - - - - - - - - - - - - - - -
 
 
 # - - - - - - - - - - - - - - - - - - - - - - - - -
+# installing gitGui
+./packages/gitgui.sh
+
+
+# - - - - - - - - - - - - - - - - - - - - - - - - -
 # installing ovpn
 ./packages/ovpn.sh
 
