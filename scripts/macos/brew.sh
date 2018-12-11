@@ -43,6 +43,9 @@ brew update && brew upgrade
 # make cask repos available
 brew tap homebrew/cask
 
+# make cask versions available (required for installing some casks like ff-developer-version, chrome
+brew tap homebrew/cask-versions
+
 # install packages
 declare -a brew_pkg=(
   composer
@@ -71,7 +74,6 @@ do
    fi
 done
 
-echo "${brew_pkg[*]}"
 print_in_yellow "The following packages will be installed via homebrew => ${brew_pkg_install[*]} \n"
 
 
@@ -115,6 +117,7 @@ declare -a brew_casks=(
   steam
   # ToDo find a way to handle the annoying KEXT security error
   #virtualbox
+  #virtualbox-extension-pack
   #vagrant
   #vagrant-manager
   webstorm
@@ -130,11 +133,10 @@ do
      print_in_green "$casks \n"
      brew_casks_install+=($casks)
    else
-     print_in_red "$casks\n"
+     print_in_red "\e[9m$package\e[0m\n"
    fi
 done
 
-echo "${brew_casks[*]}"
 print_in_yellow "The following packages will be installed via homebrew => ${brew_casks_install[*]}"
 
 : '
