@@ -106,6 +106,7 @@ declare -a brew_casks=(
   google-chrome
   google-chrome-canary
   google-backup-and-sync # google drive
+  ghostscript
   intellij-idea # ultimate edition
   imageoptim
   iterm2
