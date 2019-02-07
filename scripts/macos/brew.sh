@@ -99,6 +99,7 @@ declare -a brew_casks=(
   appcleaner
   atom
   couchbase-server-community
+  charles
   cyberduck
   firefox
   firefox-developer-edition
