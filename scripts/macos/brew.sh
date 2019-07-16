@@ -101,6 +101,7 @@ declare -a brew_casks=(
   couchbase-server-community
   charles
   cyberduck
+  epic
   firefox
   firefox-developer-edition
   fork
@@ -117,11 +118,14 @@ declare -a brew_casks=(
   robo-3t # robomongo
   skype
   steam
+  the-unarchiver
+  tunnelblick
   # ToDo find a way to handle the annoying KEXT security error
   #virtualbox
   #virtualbox-extension-pack
   #vagrant
   #vagrant-manager
+  vlc
   webstorm
 )
 
