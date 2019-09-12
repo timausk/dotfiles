@@ -98,6 +98,7 @@ fi
 declare -a brew_casks=(
   appcleaner
   atom
+  brave-browser
   couchbase-server-community
   charles
   cyberduck
