@@ -59,12 +59,26 @@ export NVM_DIR="$HOME/.nvm"
 EOL
 }
 
+## set some defaults to npm config
+set_npm_defaults () {
+  echo Type in your npm author\'s name and email.
+  printf '%s ' 'name:'
+  read -r authorName
+  printf '%s ' 'email:'
+  read -r authorEmail
+  
+  npm set init.author.name "$authorName"
+  npm set init.author.email "$authorEmail"
+  npm set init.license "MIT"
+  npm set init.version "1.0.0"
+}
 
 verify_nvm_installation() {
   local verifyOutput=$(command -v nvm)
 
   if [[ verifyOutput = "nvm" ]]; then
     print_success "nvm installed and configured properly"
+    set_npm_config
   else
     print_warning "Verifying NVM failed. On Linux: close your current terminal,
            open a new terminal, and try verifying again ($ command -v nvm)"
