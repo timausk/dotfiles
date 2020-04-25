@@ -22,6 +22,18 @@ function atom_pkg_update() {
   apm list --installed --bare > $DOTFILESROOT/src/atom/package-list.txt
 }
 
+function init_project-node {
+  git init
+  git config user.name "$(npm get init.author.name)"
+  git config user.email "$(npm get init.author.email)"
+  npx license "$(npm get init.license)" -o "$(npm get init.author.name)" > LICENSE
+  npx gitignore node
+  npx covgen "$(npm get init.author.email)"
+  npm init -y
+  git add -A
+  git commit -m "Initial commit"
+}
+
 
 # update node version manager
 function update_nvm () {
