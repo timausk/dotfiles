@@ -70,7 +70,7 @@ set_npm_defaults () {
   npm set init.author.name "$authorName"
   npm set init.author.email "$authorEmail"
   npm set init.license "MIT"
-  npm set init.version "1.0.0"
+  npm set init.version "0.0.1"
 }
 
 verify_nvm_installation() {
