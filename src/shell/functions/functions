@@ -26,7 +26,7 @@ function init_project-node {
   git init
   git config user.name "$(npm get init.author.name)"
   git config user.email "$(npm get init.author.email)"
-  npx license "$(npm get init.license)" -o "$(npm get init.author.name)" > LICENSE
+  npx license "$(npm get init.license)"
   npx gitignore node
   npx covgen "$(npm get init.author.email)"
   npm init -y
