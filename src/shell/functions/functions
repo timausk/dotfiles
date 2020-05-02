@@ -30,8 +30,12 @@ function init_project-node {
   npx gitignore node
   npx covgen "$(npm get init.author.email)"
   npm init -y
-  git add -A
-  git commit -m "Initial commit"
+  echo -n "$(tput setaf 6)create initial commit (y/n)?$(tput sgr 0)"
+  read -r REPLY
+  if [[ $REPLY =~ ^[Yy]$ ]]; then
+    git add -A
+    git commit -m "Initial commit"
+  fi
 }
 
 
