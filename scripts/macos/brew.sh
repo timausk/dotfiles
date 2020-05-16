@@ -13,18 +13,18 @@ print_in_yellow "Use alternative installation directory (only recommend if /usr/
 select yn in "Yes" "No"; do
   case $yn in
     Yes )
-      read -p "Install to directory ~/.homebrew [Y | any other key to exit]  `echo $'\n> '`" -n 1 -r
+      read -p "Install to directory ~/.homebrew [Y | any other key to exit]  $(echo $'\n> ')" -n 1 -r
       echo #new line
       if [[ $REPLY =~ ^[Yy]$ ]]; then
         print_action "install homebrew to alternative directory ~/.homebrew";
-        mkdir $HOME/.homebrew &&
-        curl -L https://github.com/mxcl/homebrew/tarball/master | tar xz --strip 1 -C $HOME/.homebrew
+        mkdir "$HOME"/.homebrew &&
+        curl -L https://github.com/mxcl/homebrew/tarball/master | tar xz --strip 1 -C "$HOME"/.homebrew
         export PATH=$HOME/.homebrew/bin:$HOME/.homebrew/sbin:$PATH
         break
       fi
     ;;
     No )
-      read -p "Install to default folder /usr/local [Y | any other key to exit]  `echo $'\n> '`" -n 1 -r
+      read -p "Install to default folder /usr/local [Y | any other key to exit]  $(echo $'\n> ')" -n 1 -r
       echo #new line
       if [[ $REPLY =~ ^[Yy]$ ]]; then
         print_action "install homebrew to /usr/local";
@@ -68,7 +68,7 @@ do
    echo #new line
    if [[ $REPLY =~ ^[Yy]$ ]]; then
      print_in_green "$package \n"
-     brew_pkg_install+=($package)
+     brew_pkg_install+=("$package")
    else
      print_in_red "\e[9m$package\e[0m\n"
    fi
@@ -87,12 +87,12 @@ print_in_yellow "Install CASKs to users local application dir (Users/$(whoami)/A
 read -p "[Y|N]? `echo $'\n> '`" -n 1 -r
 echo #new line
 if [[ $REPLY =~ ^[Yy]$ ]]; then
-  if [ ! -f $HOME/.zshenv ]; then
-    touch $HOME/.zshenv;
+  if [ ! -f "$HOME/.zshenv" ]; then
+    touch "$HOME/.zshenv";
   fi
 
-  echo "export HOMEBREW_CASK_OPTS=--appdir=/Users/$(whoami)/Applications" >> $HOME/.zshenv
-  . $HOME/.zshenv
+  echo "export HOMEBREW_CASK_OPTS=--appdir=/Users/$(whoami)/Applications" >> "$HOME/.zshenv"
+  . "$HOME/.zshenv"
 fi
 
 declare -a brew_casks=(
@@ -138,7 +138,7 @@ do
    echo #new line
    if [[ $REPLY =~ ^[Yy]$ ]]; then
      print_in_green "$casks \n"
-     brew_casks_install+=($casks)
+     brew_casks_install+=("$casks")
    else
      print_in_red "\e[9m$package\e[0m\n"
    fi

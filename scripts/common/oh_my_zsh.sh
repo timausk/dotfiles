@@ -36,10 +36,10 @@ is_oh_my_zsh_installed () {
 
 install_oh_my_zsh () {
   # clone repo
-  cd $HOME && git clone --quiet https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+  cd "$HOME" && git clone --quiet https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 
   # create config file if not already exist
-  if [ ! -f $HOME/.zshrc ]; then
+  if [ ! -f "$HOME"/.zshrc ]; then
     cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
   fi
 }

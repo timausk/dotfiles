@@ -11,14 +11,14 @@ cd "$(dirname "${BASH_SOURCE[0]}")" && . "helper.sh"
 # Functions
 
 create_symlinks() {
-  dirDotfilesRoot=`dirname $PWD`;
-  dirDotfilesBackup=$HOME/.dotfiles_backup
+  dirDotfilesRoot=$(dirname "$PWD");
+  dirDotfilesBackup="$HOME/.dotfiles_backup"
 
-  if [ ! -f $HOME/.zshenv ]; then
-    touch $HOME/.zshenv;
+  if [ ! -f "$HOME/.zshenv" ]; then
+    touch "$HOME/.zshenv";
   fi
 
-  echo "DOTFILESROOT=$dirDotfilesRoot" >> $HOME/.zshenv
+  echo "DOTFILESROOT=$dirDotfilesRoot" >> "$HOME/.zshenv"
 
   # list of dotfiles to symlink
   declare -a FILES_TO_SYMLINK=(
@@ -41,7 +41,7 @@ create_symlinks() {
     print_warning "backup folder already exist"
     exit 1
   else
-    mkdir $dirDotfilesBackup
+    mkdir "$dirDotfilesBackup"
     print_action "backup folder created"
   fi
 
@@ -53,18 +53,18 @@ create_symlinks() {
     dotfile=${i##*/}
 
     # backup and remove existing dotfile from ~
-    if [ -f $HOME/.$dotfile ]; then
-     cp $HOME/.$dotfile $dirDotfilesBackup/.$dotfile
-     rm $HOME/.$dotfile
+    if [ -f "$HOME/.$dotfile" ]; then
+     cp "$HOME/.$dotfile" "$dirDotfilesBackup/.$dotfile"
+     rm "$HOME/.$dotfile"
      print_action "Backed up and removed .$dotfile from ~"
     fi
 
     pathToSymlink="$dirDotfilesRoot/$i"
     # RFE improve
-    pathToFile=$([[ $i = *"atom"* ]] && echo $HOME/.atom/$dotfile || echo $HOME/.$dotfile)
+    pathToFile=$([[ $i = *"atom"* ]] && echo "$HOME/.atom/$dotfile" || echo "$HOME/.$dotfile")
 
     # create symlink
-    ln -s $pathToSymlink $pathToFile
+    ln -s "$pathToSymlink" "$pathToFile"
 
     print_action "symlink for .$dotfile created"
 
@@ -84,11 +84,11 @@ create_local_config_files() {
 
     file=".$i.local"
 
-    if [ -f $HOME/$file ]; then
+    if [ -f "$HOME/$file" ]; then
       print_action "$file already exist"
     else
       print_action "$file created"
-      touch $HOME/$file
+      touch "$HOME/$file"
     fi
 
   done

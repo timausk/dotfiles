@@ -2,24 +2,24 @@
 
 # Create a new directory and enter it
 function md() {
-  mkdir -p "$@" && cd "$@"
+  mkdir -p "$@" && cd "$@" || exit
   #     └─ make parent directories if needed
 }
 
 
 # (f)ind by (n)ame
 function fn() {
-  ls **/*$1*
+  ls **/*"$1"*
 }
 
 
 # atom package handling
 function atom_pkg_install() {
-  apm install --packages-file $DOTFILESROOT/src/atom/package-list.txt
+  apm install --packages-file "$DOTFILESROOT"/src/atom/package-list.txt
 }
 
 function atom_pkg_update() {
-  apm list --installed --bare > $DOTFILESROOT/src/atom/package-list.txt
+  apm list --installed --bare > "$DOTFILESROOT"/src/atom/package-list.txt
 }
 
 function init_project-node {
@@ -42,10 +42,10 @@ function init_project-node {
 # update node version manager
 function update_nvm () {
   echo 'update Node Version Manager'
-  cd $HOME/.nvm &&
+  cd "$HOME/.nvm" &&
   git fetch --quiet origin &&
   git checkout --quiet &&
-  . $HOME/.nvm/nvm.sh &&
+  . "$HOME/.nvm/nvm.sh" &&
   echo 'nvm UPDATED'
 }
 
@@ -57,7 +57,7 @@ function ydl() {
     read REPLY
 
     if [[ $REPLY = *"www.youtube.com"* ]]; then
-      youtube-dl -x --audio-quality 3 --audio-format mp3 -o "~/Downloads/Music/%(title)s.%(ext)s" $REPLY
+      youtube-dl -x --audio-quality 3 --audio-format mp3 -o "$HOME/Downloads/Music/%(title)s.%(ext)s" "$REPLY"
       ydl
     elif [[ $REPLY =~ ^[Xx]$ ]]; then
       return;
