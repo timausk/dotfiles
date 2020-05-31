@@ -78,7 +78,7 @@ verify_nvm_installation() {
 
   if [[ verifyOutput = "nvm" ]]; then
     print_success "nvm installed and configured properly"
-    set_npm_config
+    set_npm_defaults
   else
     print_warning "Verifying NVM failed. On Linux: close your current terminal,
            open a new terminal, and try verifying again ($ command -v nvm)"
