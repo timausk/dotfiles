@@ -73,12 +73,18 @@ set_npm_defaults () {
   npm set init.version "0.0.1"
 }
 
+## RFE extend list, extract to separate file + loop/ask s. brew.sh
+install_npm_packages() {
+  npm install -g svgo
+}
+
 verify_nvm_installation() {
   local verifyOutput=$(command -v nvm)
 
   if [[ verifyOutput = "nvm" ]]; then
     print_success "nvm installed and configured properly"
     set_npm_defaults
+    install_npm_packages
   else
     print_warning "Verifying NVM failed. On Linux: close your current terminal,
            open a new terminal, and try verifying again ($ command -v nvm)"
