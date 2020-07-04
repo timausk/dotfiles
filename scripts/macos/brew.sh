@@ -52,6 +52,7 @@ declare -a brew_pkg=(
   ffmpeg
   htop
   git
+  go
   maven
   mongodb
   php70
