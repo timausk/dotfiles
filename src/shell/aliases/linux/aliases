@@ -5,9 +5,9 @@ alias aptuu='sudo apt update \
 		  && sudo apt upgrade -y \
 		  && sudo apt autoremove'
 
+alias snapu='sudo snap refresh'
 
-
-alias update_all='aptuu; update_nvm';
+alias update_all='aptuu; snapu; update_nvm';
 
 
 alias ll='ls -alh --color=auto'
