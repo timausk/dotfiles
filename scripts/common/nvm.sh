@@ -15,10 +15,10 @@ print_info "- - - - - - - Install Node Version Manager  - - - - - - - - - - - - 
 
 install_nvm () {
 
-  cd $HOME &&
+  cd "$HOME" &&
   git clone --quiet https://github.com/creationix/nvm.git .nvm &&
   cd .nvm &&
-  . $HOME/.nvm/nvm.sh &&
+  . "$HOME/.nvm/nvm.sh" &&
   print_action "cloned repository to ~/.nvm"
 
   add_nvm_config
@@ -30,24 +30,24 @@ update_nvm () {
 
   print_action "update nvm"
 
-  cd $HOME/.nvm &&
+  cd "$HOME/.nvm" &&
   git fetch --quiet origin &&
   git checkout --quiet &&
-  . $HOME/.nvm/nvm.sh &&
+  . "$HOME/.nvm/nvm.sh" &&
   print_success "nvm updated"
 }
 
 
 add_nvm_config() {
 
-  if [ ! -f $HOME/.zshrc.local ]; then
+  if [[ ! -f $HOME/.zshrc.local ]]; then
     print_warning ".zshrc.local created"
-    touch $HOME/.zshrc.local;
+    touch "$HOME/.zshrc.local";
   fi
 
   # add the necessary config to LOCAL shell config file (zshrc.local)
 
-cat >> $HOME/.zshrc.local <<EOL
+cat >> "$HOME/.zshrc.local" <<EOL
 # - - Node Version Manager - - - - - - - - - - - - - - - - - - - - - - - - - -
 export NVM_DIR="$HOME/.nvm"
 # This loads nvm
@@ -63,8 +63,10 @@ EOL
 set_npm_defaults () {
   echo Type in your npm author\'s name and email.
   printf '%s ' 'name:'
+  local authorName
   read -r authorName
   printf '%s ' 'email:'
+  local authorEmail
   read -r authorEmail
   
   npm set init.author.name "$authorName"
@@ -81,7 +83,7 @@ install_npm_packages() {
 verify_nvm_installation() {
   local verifyOutput=$(command -v nvm)
 
-  if [[ verifyOutput = "nvm" ]]; then
+  if [[ $verifyOutput = "nvm" ]]; then
     print_success "nvm installed and configured properly"
     set_npm_defaults
     install_npm_packages
@@ -99,7 +101,8 @@ install_latest_stable_node () {
   # Install the latest stable version of Node
   # (this will also set it as the default).
 
-  . $HOME/.zshrc.local && nvm install node
+    # shellcheck source=/dev/null
+  . "$HOME/.zshrc.local" && nvm install node
 }
 
 

@@ -49,13 +49,13 @@ change_current_shell () {
 
   # https://github.com/robbyrussell/oh-my-zsh/blob/master/tools/install.sh
 
-  TEST_CURRENT_SHELL=$(expr "$SHELL" : '.*/\(.*\)')
+  local TEST_CURRENT_SHELL=$(expr "$SHELL" : '.*/\(.*\)')
 
   if [ "$TEST_CURRENT_SHELL" != "zsh" ]; then
     # If this platform provides a "chsh" command (not Cygwin), do it, man!
     if hash chsh >/dev/null 2>&1; then
       print_action "Time to change your default shell to zsh!"
-      chsh -s $(grep /zsh$ /etc/shells | tail -1)
+      chsh -s "$(grep /zsh$ /etc/shells | tail -1)"
     # Else, suggest the user do so manually.
     else
       print_warning "I can't change your shell automatically because this system does not have chsh."

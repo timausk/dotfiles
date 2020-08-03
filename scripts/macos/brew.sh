@@ -85,7 +85,7 @@ brew install "${brew_pkg_install[@]}"
 # - - - - - - - - - - - - - - - - - - - - - - - - -
 
 print_in_yellow "Install CASKs to users local application dir (Users/$(whoami)/Applications)"
-read -p "[Y|N]? `echo $'\n> '`" -n 1 -r
+read -p "[Y|N]? $(echo $'\n> ')" -n 1 -r
 echo #new line
 if [[ $REPLY =~ ^[Yy]$ ]]; then
   if [ ! -f "$HOME/.zshenv" ]; then
@@ -93,6 +93,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
   fi
 
   echo "export HOMEBREW_CASK_OPTS=--appdir=/Users/$(whoami)/Applications" >> "$HOME/.zshenv"
+  # shellcheck source=/dev/null
   . "$HOME/.zshenv"
 fi
 
@@ -148,6 +149,7 @@ done
 
 print_in_yellow "The following packages will be installed via homebrew => ${brew_casks_install[*]}"
 
+# shellcheck disable=SC2016
 : '
 if [[ ${brew_casks[@]} = *"virtualbox"* ]]; then
 read -p "We are going to install virtualbox.
