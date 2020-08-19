@@ -101,9 +101,9 @@ declare -a brew_casks=(
   appcleaner
   atom
   brave-browser
-  couchbase-server-community
   charles
   cyberduck
+  docker
   epic
   firefox
   firefox-developer-edition
