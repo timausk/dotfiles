@@ -98,6 +98,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
 fi
 
 declare -a brew_casks=(
+  anydesk
   appcleaner
   atom
   brave-browser
