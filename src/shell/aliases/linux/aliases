@@ -7,7 +7,7 @@ alias aptuu='sudo apt update \
 
 alias snapu='sudo snap refresh'
 
-alias update_all='aptuu; snapu; update_nvm';
+alias update_all='aptuu; snapu; update_nvm; sdk update';
 
 
 alias ll='ls -alh --color=auto'
