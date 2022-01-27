@@ -26,12 +26,15 @@ atom_pkg_install
 
 ./../common/oh_my_zsh.sh
 
-
 # - - - - - - - - - - - - - - - - - - - - - - - - -
 # installing node version manager
 
 ./../common/nvm.sh
 
+# - - - - - - - - - - - - - - - - - - - - - - - - -
+# installing sdkman
+
+./../common/sdkman.sh
 
 # - - - - - - - - - - - - - - - - - - - - - - - - -
 # update OS

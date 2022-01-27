@@ -52,3 +52,7 @@ if [[ $platform == "Linux" ]]; then
 elif [[ $platform == "Darwin" ]]; then
   . "$shellDotPath/aliases/macos/aliases"
 fi
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/tim.tornau/.sdkman"
+[[ -s "/Users/tim.tornau/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/tim.tornau/.sdkman/bin/sdkman-init.sh"

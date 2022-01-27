@@ -29,5 +29,10 @@ sudo apt update;
 
 
 # - - - - - - - - - - - - - - - - - - - - - - - - -
-# installing Node Verion Manager
+# installing Node Version Manager
 ./../common/nvm.sh
+
+# - - - - - - - - - - - - - - - - - - - - - - - - -
+# installing sdkman
+
+./../common/sdkman.sh
