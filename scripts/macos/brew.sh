@@ -53,6 +53,7 @@ declare -a brew_pkg=(
   htop
   git
   go
+  kubernetes-cli
   maven
   mongodb
   php70
@@ -120,6 +121,7 @@ declare -a brew_casks=(
   java # this installs the latest version!
   keepassx
   postman
+  rocket-typist
   robo-3t # robomongo
   skype
   steam
