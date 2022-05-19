@@ -48,15 +48,12 @@ brew tap homebrew/cask-versions
 
 # install packages
 declare -a brew_pkg=(
-  composer
   ffmpeg
   htop
   git
   go
   kubernetes-cli
   maven
-  mongodb
-  php70
   youtube-dl
   zsh
   zsh-completions
