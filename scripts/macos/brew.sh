@@ -147,4 +147,4 @@ System Preferences > Security & Privacy.
 fi
 '
 
-brew cask install "${brew_casks_install[@]}"
+brew install --cask "${brew_casks_install[@]}"
