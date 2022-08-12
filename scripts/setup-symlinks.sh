@@ -13,9 +13,16 @@ cd "$(dirname "${BASH_SOURCE[0]}")" && . "helper.sh"
 create_symlinks() {
   dirDotfilesRoot=$(dirname "$PWD");
   dirDotfilesBackup="$HOME/.dotfiles_backup"
+  atomDir="$HOME/.atom"
 
   if [ ! -f "$HOME/.zshenv" ]; then
     touch "$HOME/.zshenv";
+  fi
+
+  if [ ! -d "$atomDir" ]; then
+    print_info "folder for atom not exist..."
+    mkdir "$atomDir"
+    print_info "created $atomDir"
   fi
 
   echo "DOTFILESROOT=$dirDotfilesRoot" >> "$HOME/.zshenv"
