@@ -100,37 +100,25 @@ declare -a brew_casks=(
   appcleaner
   atom
   brave-browser
-  charles
   cyberduck
   docker
-  epic
   firefox
   firefox-developer-edition
   fork
   google-chrome
   google-chrome-canary
   google-backup-and-sync # google drive
-  ghostscript
   hugo
   intellij-idea # ultimate edition
   imageoptim
   iterm2
-  java # this installs the latest version!
   keepassx
   postman
-  rocket-typist
   robo-3t # robomongo
   skype
-  steam
   the-unarchiver
   tunnelblick
-  # ToDo find a way to handle the annoying KEXT security error
-  #virtualbox
-  #virtualbox-extension-pack
-  #vagrant
-  #vagrant-manager
   vlc
-  webstorm
 )
 
 declare -a brew_casks_install=()
