@@ -28,7 +28,7 @@ select yn in "Yes" "No"; do
       echo #new line
       if [[ $REPLY =~ ^[Yy]$ ]]; then
         print_action "install homebrew to /usr/local";
-        /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
         break
       fi
     ;;
