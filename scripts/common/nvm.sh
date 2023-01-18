@@ -69,10 +69,10 @@ set_npm_defaults () {
   local authorEmail
   read -r authorEmail
   
-  npm set init.author.name "$authorName"
-  npm set init.author.email "$authorEmail"
-  npm set init.license "MIT"
-  npm set init.version "0.0.1"
+  npm c set init-author-name "$authorName"
+  npm c set init-author-email "$authorEmail"
+  npm c set init-license "MIT"
+  npm c set init-version "0.0.1"
 }
 
 ## RFE extend list, extract to separate file + loop/ask s. brew.sh
