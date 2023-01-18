@@ -94,15 +94,12 @@ verify_nvm_installation() {
 }
 
 
-install_latest_stable_node () {
+install_latest_lts_node () {
 
-  print_action "install latest stable node"
-
-  # Install the latest stable version of Node
-  # (this will also set it as the default).
+  print_action "install latest lts node version"
 
     # shellcheck source=/dev/null
-  . "$HOME/.zshrc.local" && nvm install node
+  . "$HOME/.zshrc.local" && nvm install --lts
 }
 
 
@@ -115,4 +112,4 @@ else
   update_nvm
 fi
 
-install_latest_stable_node
+install_latest_lts_node
