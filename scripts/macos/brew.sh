@@ -96,7 +96,6 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
 fi
 
 declare -a brew_casks=(
-  anydesk
   appcleaner
   atom
   brave-browser
@@ -107,14 +106,12 @@ declare -a brew_casks=(
   fork
   google-chrome
   google-chrome-canary
-  google-backup-and-sync # google drive
-  hugo
   intellij-idea # ultimate edition
   imageoptim
   iterm2
   keepassx
   postman
-  robo-3t # robomongo
+  robo-3t
   skype
   the-unarchiver
   tunnelblick
@@ -131,7 +128,7 @@ do
      print_in_green "$casks \n"
      brew_casks_install+=("$casks")
    else
-     print_in_red "\e[9m$package\e[0m\n"
+     print_in_red "\e[9m$casks\e[0m\n"
    fi
 done
 
