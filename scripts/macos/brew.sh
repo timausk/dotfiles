@@ -54,7 +54,7 @@ declare -a brew_pkg=(
   go
   kubernetes-cli
   maven
-  youtube-dl
+  yt-dlp
   zsh
   zsh-completions
 )

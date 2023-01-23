@@ -58,8 +58,22 @@ function ydl() {
     read -r REPLY
 
     if [[ $REPLY = *"www.youtube.com"* ]]; then
-      youtube-dl -x --audio-quality 3 --audio-format mp3 -o "$HOME/Downloads/Music/%(title)s.%(ext)s" "$REPLY"
-      ydl
+
+      source="$REPLY"
+
+      PS3="Download video or audio? "
+      select opt in Video Audio; do
+        case $opt in
+          Video)
+            yt-dlp -S "ext" -o "$HOME/Downloads/Videos/%(title)s.%(ext)s" "$source"
+          ;;
+          Audio)
+            yt-dlp -x --audio-quality 3 --audio-format mp3 -o "$HOME/Downloads/Music/%(title)s.%(ext)s" "$source"
+          ;;
+        esac
+        ydl
+      done
+      y
     elif [[ $REPLY =~ ^[Xx]$ ]]; then
       return;
     else
