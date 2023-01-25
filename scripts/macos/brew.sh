@@ -96,6 +96,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
 fi
 
 declare -a brew_casks=(
+  alacritty
   appcleaner
   atom
   brave-browser
@@ -108,7 +109,6 @@ declare -a brew_casks=(
   google-chrome-canary
   intellij-idea # ultimate edition
   imageoptim
-  iterm2
   keepassx
   postman
   robo-3t
