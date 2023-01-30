@@ -38,6 +38,11 @@ select yn in "Yes" "No"; do
     esac
 done
 
+# make brew command available for m1 macs
+if is_m1; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+
 brew update && brew upgrade
 
 # make cask repos available

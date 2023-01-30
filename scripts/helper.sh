@@ -109,3 +109,13 @@ get_os() {
 
   printf "%s" "$os"
 }
+
+# - - - - - - - - - - - - - - - - - - - - - - - - -
+# is m1 mac
+
+is_m1() {
+  if [[ $(arch) == 'arm64' ]]; then
+    return 0
+  fi
+    return 1
+}
