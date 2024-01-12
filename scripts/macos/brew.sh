@@ -53,12 +53,15 @@ brew tap homebrew/cask-versions
 
 # install packages
 declare -a brew_pkg=(
+  awscli
   ffmpeg
   htop
   git
   go
   kubernetes-cli
   maven
+  siege
+  unar
   yt-dlp
   zsh
   zsh-completions
@@ -114,11 +117,10 @@ declare -a brew_casks=(
   google-chrome-canary
   intellij-idea # ultimate edition
   imageoptim
-  keepassx
+  keepassxc
   postman
   robo-3t
   skype
-  the-unarchiver
   tunnelblick
   vlc
 )
