@@ -16,7 +16,6 @@ alias cp='cp -v'
 
 
 # - - - - Shortcuts - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-alias a='atom'
 alias v='vim'
 alias cl='clear'
 alias uz='gunzip -k'
@@ -66,13 +65,6 @@ alias fs="stat -f \"%z bytes\""
 # Show human friendly numbers and colors
 alias df='df -h'
 alias du='du -h -d 2'
-
-
-# Vagrant
-alias vup='vagrant up'
-alias vhalt='vagrant halt'
-alias vkill='vagrant destroy'
-alias v-v='vagrant -v'
 
 
 # Copy SSH to clipboard
