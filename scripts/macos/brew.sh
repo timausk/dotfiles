@@ -119,6 +119,7 @@ declare -a brew_casks=(
   imageoptim
   keepassxc
   postman
+  rbenv
   robo-3t
   skype
   tunnelblick
