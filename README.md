@@ -1,3 +1,6 @@
+# > 🚚 This project has moved to [Codeberg](https://codeberg.org/timausk/dotfiles)
+
+
 # timausk's dotfiles
 * These are **my** base dotfiles that I start with when I set up a new dev environment.
 * Certainly you can make suggestions, but highly likely I may decline it, if it's not of personal value to me.
