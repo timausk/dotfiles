@@ -57,6 +57,12 @@ fi
 export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/opt/homebrew/sbin:$PATH"
 
+# Ruby version manager (rbenv) configuration
+# - Adds rbenv to PATH so Ruby commands use the correct version
+# - Initializes shims, autocompletion, and version switching
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/tim.tornau/.sdkman"
 [[ -s "/Users/tim.tornau/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/tim.tornau/.sdkman/bin/sdkman-init.sh"
